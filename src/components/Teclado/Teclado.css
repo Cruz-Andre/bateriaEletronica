@@ -1,0 +1,57 @@
+:root {
+  --cinza: #aaa;
+  --vermelha: #e93d50;
+  --vermelha-escura: #af303f;
+  --branca: #fff;
+  --luz: rgb(229, 255, 0);
+}
+
+.tecladoContainer {
+  background: linear-gradient(to bottom, #FFF4E4 25%, #F88020 50%, #D1274B 75%, #3D0E1E 100%);
+  box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
+  border-radius: 1rem;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+}
+
+.drum-pad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--branca);
+  border-radius: 2rem;
+  box-shadow: 3px 3px 0 var(--cinza);
+  color: var(--vermelha);
+  cursor: pointer;
+  font-size: 1.75rem;
+  font-weight: bold;
+  width: 7rem;
+  height: 6rem;
+}
+
+.drum-pad.ativa, .drum-pad:active {
+  background-color: var(--vermelha);
+  border: 4px solid var(--vermelha);
+  box-shadow: 3px 3px 0 var(--vermelha-escura) inset;
+  color: var(--branca);
+  outline: none;
+}
+
+.drum-pad.focus, .drum-pad:focus {
+  outline: none;
+  box-shadow: 1px 1px 10px var(--luz);
+}
+
+.drum-pad.active:focus, .drum-pad:active:focus {
+  box-shadow: 3px 3px 0 var(--vermelha-escura) inset, 1px 1px 10px var(--luz);
+}
+
+@media (max-width: 530px) {
+  .drum-pad {
+    width: 5rem;
+    height: 5rem;
+  }
+}

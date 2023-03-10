@@ -1,0 +1,19 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.titulo{
+  margin: 0;
+}
+
+/* 
+.App {
+  width: 70%;
+  height: 50vh;
+} */
+
